@@ -9,6 +9,13 @@ export default function Hero() {
     const { headline, subline, primaryCta, secondaryCta, microcopy } = siteContent.hero;
     const { theme } = useTheme();
     const [isPlaying, setIsPlaying] = useState(false);
+    const [hasLoaded, setHasLoaded] = useState(false);
+
+    // After 2.5 seconds, we consider the initial animation "done" and it dims
+    React.useEffect(() => {
+        const timer = setTimeout(() => setHasLoaded(true), 2500);
+        return () => clearTimeout(timer);
+    }, []);
 
     return (
         <section
@@ -16,7 +23,7 @@ export default function Hero() {
             onClick={() => setIsPlaying(true)}
         >
             {/* 3D Background */}
-            <div className={`absolute inset-0 w-full h-full z-0 overflow-hidden transition-opacity duration-1000 ${isPlaying ? 'opacity-100' : 'opacity-60 grayscale'}`}>
+            <div className={`absolute inset-0 w-full h-full z-0 overflow-hidden transition-all duration-1000 ${isPlaying || !hasLoaded ? 'opacity-100 scale-100' : 'opacity-40 grayscale scale-[1.02]'}`}>
                 <ShaderAnimation isPlaying={isPlaying} />
 
                 {/* Gradient Overlay so text remains readable depending on theme */}
