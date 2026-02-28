@@ -9,7 +9,7 @@ export default function LogoStrip() {
                 {siteContent.logos.map((logo, idx) => (
                     <div
                         key={idx}
-                        className="relative h-8 w-32 sm:w-40 grayscale dark:invert opacity-70 hover:opacity-100 hover:grayscale-0 dark:hover:invert-0 transition-all duration-300"
+                        className="relative h-10 w-40 sm:h-11 sm:w-52 grayscale dark:invert opacity-70 hover:opacity-100 hover:grayscale-0 dark:hover:invert-0 transition-all duration-300"
                         title={logo.name}
                     >
                         <Image
