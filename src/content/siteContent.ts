@@ -230,7 +230,7 @@ export const siteContent = {
     contact: {
         title: "Let’s talk",
         oneLiner: "If you’re building AI × GTM in B2B (especially industrial), I’m happy to chat.",
-        email: "mailto:hello@example.com",
+        email: "mailto:at.adityagupta@gmail.com",
         linkedIn: "https://linkedin.com/in/adityagupta",
         helperLine: "Include: role/team + what you want solved.",
     },

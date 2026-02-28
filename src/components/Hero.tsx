@@ -25,7 +25,7 @@ export default function Hero() {
 
             <div className="relative z-10 max-w-6xl mx-auto w-full">
                 <div className="max-w-3xl">
-                    <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-gray-900 dark:text-white leading-[1.15] mb-6 drop-shadow-sm dark:drop-shadow-lg transition-colors duration-500">
+                    <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900 dark:text-white leading-[1.15] mb-6 drop-shadow-sm dark:drop-shadow-lg transition-colors duration-500">
                         {headline}
                     </h1>
                     <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-10 max-w-2xl font-medium transition-colors duration-500">
