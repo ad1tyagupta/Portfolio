@@ -4,9 +4,16 @@ import { useEffect, useRef } from "react"
 import * as THREE from "three"
 import { useTheme } from "../ThemeProvider"
 
-export function ShaderAnimation() {
+export function ShaderAnimation({ isPlaying = false }: { isPlaying?: boolean }) {
     const { theme } = useTheme()
     const containerRef = useRef<HTMLDivElement>(null)
+    const isPlayingRef = useRef(isPlaying)
+    const hasRenderedInitial = useRef(false)
+
+    // Keep the ref updated without re-triggering the useEffect
+    useEffect(() => {
+        isPlayingRef.current = isPlaying;
+    }, [isPlaying]);
 
     // We use a ref to store uniforms so we can update it reactively
     const uniformsRef = useRef({
@@ -18,6 +25,10 @@ export function ShaderAnimation() {
     // Whenever theme changes, update the uniform variable
     useEffect(() => {
         uniformsRef.current.isLightMode.value = theme === "light" ? 1.0 : 0.0;
+        // Force a re-render if it's paused so the theme switch shows immediately
+        if (!isPlayingRef.current && sceneRef.current) {
+            sceneRef.current.renderer.render(sceneRef.current.scene, sceneRef.current.camera);
+        }
     }, [theme]);
 
     const sceneRef = useRef<{
@@ -100,22 +111,15 @@ export function ShaderAnimation() {
             renderer.setSize(width, height)
             uniformsRef.current.resolution.value.x = renderer.domElement.width
             uniformsRef.current.resolution.value.y = renderer.domElement.height
+            // Force render on resize if paused so it doesn't stretch
+            if (!isPlayingRef.current) {
+                renderer.render(scene, camera)
+            }
         }
 
         // Initial resize
         onWindowResize()
         window.addEventListener("resize", onWindowResize, false)
-
-        // Animation loop
-        const animate = () => {
-            const animationId = requestAnimationFrame(animate)
-            uniformsRef.current.time.value += 0.06
-            renderer.render(scene, camera)
-
-            if (sceneRef.current) {
-                sceneRef.current.animationId = animationId
-            }
-        }
 
         // Store scene references for cleanup
         sceneRef.current = {
@@ -123,6 +127,25 @@ export function ShaderAnimation() {
             scene,
             renderer,
             animationId: 0,
+        }
+
+        // Animation loop
+        const animate = () => {
+            const animationId = requestAnimationFrame(animate)
+
+            if (isPlayingRef.current) {
+                uniformsRef.current.time.value += 0.06;
+                renderer.render(scene, camera);
+                hasRenderedInitial.current = true;
+            } else if (!hasRenderedInitial.current) {
+                // Render at least once so it's not strictly blank on load
+                renderer.render(scene, camera);
+                hasRenderedInitial.current = true;
+            }
+
+            if (sceneRef.current) {
+                sceneRef.current.animationId = animationId
+            }
         }
 
         // Start animation

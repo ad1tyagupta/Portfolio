@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react";
+import React, { useState } from "react";
 import { siteContent } from "@/content/siteContent";
 import { ShaderAnimation } from "@/components/ui/shader-animation";
 import { useTheme } from "./ThemeProvider";
@@ -8,12 +8,16 @@ import { useTheme } from "./ThemeProvider";
 export default function Hero() {
     const { headline, subline, primaryCta, secondaryCta, microcopy } = siteContent.hero;
     const { theme } = useTheme();
+    const [isPlaying, setIsPlaying] = useState(false);
 
     return (
-        <section className="relative pt-40 pb-20 px-6 min-h-[90vh] flex flex-col justify-center overflow-hidden">
+        <section
+            className="relative pt-40 pb-20 px-6 min-h-[90vh] flex flex-col justify-center overflow-hidden cursor-pointer"
+            onClick={() => setIsPlaying(true)}
+        >
             {/* 3D Background */}
-            <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
-                <ShaderAnimation />
+            <div className={`absolute inset-0 w-full h-full z-0 overflow-hidden transition-opacity duration-1000 ${isPlaying ? 'opacity-100' : 'opacity-60 grayscale'}`}>
+                <ShaderAnimation isPlaying={isPlaying} />
 
                 {/* Gradient Overlay so text remains readable depending on theme */}
                 {theme === 'dark' ? (
