@@ -58,7 +58,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
+      <body className="antialiased font-sans bg-white dark:bg-[#0a0a0a] text-gray-900 dark:text-white transition-colors duration-500">
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
+
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=G-QEBT3S10JS`}
           strategy="afterInteractive"
@@ -71,11 +75,6 @@ export default function RootLayout({
             gtag('config', 'G-QEBT3S10JS');
           `}
         </Script>
-      </head>
-      <body className="antialiased font-sans bg-white dark:bg-[#0a0a0a] text-gray-900 dark:text-white transition-colors duration-500">
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
       </body>
     </html>
   );
