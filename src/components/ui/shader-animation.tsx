@@ -130,16 +130,13 @@ export function ShaderAnimation({ isPlaying = false }: { isPlaying?: boolean }) 
         }
 
         // Animation loop
-        let startTime = Date.now();
-        const INITIAL_PLAY_DURATION = 2500; // Play freely for 2.5 seconds on load
-
         const animate = () => {
             const animationId = requestAnimationFrame(animate)
-            const timeElapsed = Date.now() - startTime;
 
-            // Play if explicitly playing OR if we are still in the initial load window
-            if (isPlayingRef.current || timeElapsed < INITIAL_PLAY_DURATION) {
-                uniformsRef.current.time.value += 0.06;
+            // Play if explicitly playing
+            if (isPlayingRef.current) {
+                // Slower, elegant animation speed
+                uniformsRef.current.time.value += 0.008;
                 renderer.render(scene, camera);
                 hasRenderedInitial.current = true;
             } else if (!hasRenderedInitial.current) {

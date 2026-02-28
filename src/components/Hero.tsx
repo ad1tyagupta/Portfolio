@@ -8,22 +8,30 @@ import { useTheme } from "./ThemeProvider";
 export default function Hero() {
     const { headline, subline, primaryCta, secondaryCta, microcopy } = siteContent.hero;
     const { theme } = useTheme();
-    const [isPlaying, setIsPlaying] = useState(false);
-    const [hasLoaded, setHasLoaded] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(true);
 
-    // After 2.5 seconds, we consider the initial animation "done" and it dims
+    // Initial load: play for 15 seconds then pause
     React.useEffect(() => {
-        const timer = setTimeout(() => setHasLoaded(true), 2500);
+        let timer: NodeJS.Timeout;
+        if (isPlaying) {
+            timer = setTimeout(() => setIsPlaying(false), 15000);
+        }
         return () => clearTimeout(timer);
-    }, []);
+    }, [isPlaying]);
+
+    const handleHeroClick = () => {
+        if (!isPlaying) {
+            setIsPlaying(true);
+        }
+    };
 
     return (
         <section
             className="relative pt-40 pb-20 px-6 min-h-[90vh] flex flex-col justify-center overflow-hidden cursor-pointer"
-            onClick={() => setIsPlaying(true)}
+            onClick={handleHeroClick}
         >
             {/* 3D Background */}
-            <div className={`absolute inset-0 w-full h-full z-0 overflow-hidden transition-all duration-1000 ${isPlaying || !hasLoaded ? 'opacity-100 scale-100' : 'opacity-40 grayscale scale-[1.02]'}`}>
+            <div className={`absolute inset-0 w-full h-full z-0 overflow-hidden transition-all duration-1000 ${isPlaying ? 'opacity-100 scale-100' : 'opacity-40 grayscale scale-[1.02]'}`}>
                 <ShaderAnimation isPlaying={isPlaying} />
 
                 {/* Gradient Overlay so text remains readable depending on theme */}
