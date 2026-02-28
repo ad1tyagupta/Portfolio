@@ -27,7 +27,12 @@ export const siteContent = {
         secondaryCta: { label: "Contact", anchor: "#contact" },
         microcopy: "I like shipping things that teams actually use—not just slides.",
     },
-    logos: ["Siemens Energy", "BMW Group", "Bundesdruckerei", "HHL Leipzig"],
+    logos: [
+        { name: "Siemens Energy", imageSrc: "/logos/siemens.png" },
+        { name: "BMW Group", imageSrc: "/logos/bmw.png" },
+        { name: "Bundesdruckerei", imageSrc: "/logos/bundesdruckerei.png" },
+        { name: "HHL Leipzig", imageSrc: "/logos/hhl.png" }
+    ],
     tiles: [
         {
             title: "GTM & Market Intelligence",
