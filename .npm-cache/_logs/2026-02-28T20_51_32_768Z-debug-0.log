@@ -1,0 +1,90 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.9.3
+2 info using node@v22.18.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/adityagupta/Documents/Antigravity/Portfolio website/portfolio/.npmrc
+5 silly config load:file:/Users/adityagupta/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install lucide-react clsx tailwind-merge
+8 verbose argv "install" "--cache" "./.npm-cache" "lucide-react" "clsx" "tailwind-merge"
+9 verbose logfile logs-max:10 dir:/Users/adityagupta/Documents/Antigravity/Portfolio website/portfolio/.npm-cache/_logs/2026-02-28T20_51_32_768Z-
+10 verbose logfile /Users/adityagupta/Documents/Antigravity/Portfolio website/portfolio/.npm-cache/_logs/2026-02-28T20_51_32_768Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+13 silly idealTree buildDeps
+14 silly fetch manifest clsx@^2.1.1
+15 silly packumentCache full:https://registry.npmjs.org/clsx cache-miss
+16 verbose shrinkwrap failed to load node_modules/.package-lock.json EPERM: operation not permitted, stat '/Users/adityagupta/Documents/Antigravity/Portfolio website/portfolio/node_modules'
+17 http fetch GET 200 https://registry.npmjs.org/clsx 136ms (cache revalidated)
+18 silly packumentCache full:https://registry.npmjs.org/clsx set size:42506 disposed:false
+19 silly fetch manifest lucide-react@^0.574.0
+20 silly packumentCache full:https://registry.npmjs.org/lucide-react cache-miss
+21 http fetch GET 200 https://registry.npmjs.org/npm 1156ms
+22 http fetch GET 200 https://registry.npmjs.org/lucide-react 144ms (cache updated)
+23 silly packumentCache full:https://registry.npmjs.org/lucide-react set size:undefined disposed:false
+24 silly fetch manifest react@19.2.3
+25 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+26 http fetch GET 200 https://registry.npmjs.org/react 476ms (cache updated)
+27 silly packumentCache full:https://registry.npmjs.org/react set size:undefined disposed:false
+28 silly fetch manifest tailwind-merge@^3.4.1
+29 silly packumentCache full:https://registry.npmjs.org/tailwind-merge cache-miss
+30 http fetch GET 200 https://registry.npmjs.org/tailwind-merge 274ms (cache updated)
+31 silly packumentCache full:https://registry.npmjs.org/tailwind-merge set size:undefined disposed:false
+32 silly placeDep ROOT clsx@2.1.1 REPLACE for: portfolio@0.1.0 want: ^2.1.1
+33 silly placeDep ROOT lucide-react@0.574.0 REPLACE for: portfolio@0.1.0 want: ^0.574.0
+34 silly placeDep ROOT tailwind-merge@3.5.0 REPLACE for: portfolio@0.1.0 want: ^3.4.1
+35 silly reify moves {}
+36 verbose reify failed optional dependency /Users/adityagupta/Documents/Antigravity/Portfolio website/portfolio/node_modules/@tailwindcss/oxide-wasm32-wasi
+37 silly reify mark deleted [
+37 silly reify   '/Users/adityagupta/Documents/Antigravity/Portfolio website/portfolio/node_modules/@tailwindcss/oxide-wasm32-wasi'
+37 silly reify ]
+38 verbose stack Error: EPERM: operation not permitted, lstat '/Users/adityagupta/Documents/Antigravity/Portfolio website/portfolio/node_modules'
+38 verbose stack     at async lstat (node:internal/fs/promises:1028:18)
+38 verbose stack     at async #loadActual (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/load-actual.js:129:15)
+38 verbose stack     at async /usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:931:11
+38 verbose stack     at async Promise.allSettled (index 0)
+38 verbose stack     at async [reifyPackages] (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:325:11)
+38 verbose stack     at async Arborist.reify (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:142:5)
+38 verbose stack     at async Install.exec (/usr/local/lib/node_modules/npm/lib/commands/install.js:150:5)
+38 verbose stack     at async Npm.exec (/usr/local/lib/node_modules/npm/lib/npm.js:207:9)
+38 verbose stack     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli/entry.js:74:5)
+39 error code EPERM
+40 error syscall lstat
+41 error path /Users/adityagupta/Documents/Antigravity/Portfolio website/portfolio/node_modules
+42 error errno -1
+43 error Error: EPERM: operation not permitted, lstat '/Users/adityagupta/Documents/Antigravity/Portfolio website/portfolio/node_modules'
+43 error     at async lstat (node:internal/fs/promises:1028:18)
+43 error     at async #loadActual (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/load-actual.js:129:15)
+43 error     at async /usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:931:11
+43 error     at async Promise.allSettled (index 0)
+43 error     at async [reifyPackages] (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:325:11)
+43 error     at async Arborist.reify (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:142:5)
+43 error     at async Install.exec (/usr/local/lib/node_modules/npm/lib/commands/install.js:150:5)
+43 error     at async Npm.exec (/usr/local/lib/node_modules/npm/lib/npm.js:207:9)
+43 error     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli/entry.js:74:5) {
+43 error   errno: -1,
+43 error   code: 'EPERM',
+43 error   syscall: 'lstat',
+43 error   path: '/Users/adityagupta/Documents/Antigravity/Portfolio website/portfolio/node_modules'
+43 error }
+44 error
+44 error The operation was rejected by your operating system.
+44 error It is likely you do not have the permissions to access this file as the current user
+44 error
+44 error If you believe this might be a permissions issue, please double-check the
+44 error permissions of the file and its containing directories, or try running
+44 error the command again as root/Administrator.
+45 silly unfinished npm timer reify 1772311893558
+46 silly unfinished npm timer reify:loadBundles 1772311895586
+47 verbose cwd /Users/adityagupta/Documents/Antigravity/Portfolio website/portfolio
+48 verbose os Darwin 25.3.0
+49 verbose node v22.18.0
+50 verbose npm  v10.9.3
+51 notice
+51 notice New [31mmajor[39m version of npm available! [31m10.9.3[39m -> [34m11.11.0[39m
+51 notice Changelog: [34mhttps://github.com/npm/cli/releases/tag/v11.11.0[39m
+51 notice To update run: [4mnpm install -g npm@11.11.0[24m
+51 notice  { force: true, [Symbol(proc-log.meta)]: true }
+52 verbose exit -1
+53 verbose code -1
+54 error A complete log of this run can be found in: /Users/adityagupta/Documents/Antigravity/Portfolio website/portfolio/.npm-cache/_logs/2026-02-28T20_51_32_768Z-debug-0.log
