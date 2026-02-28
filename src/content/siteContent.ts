@@ -231,7 +231,7 @@ export const siteContent = {
         title: "Let’s talk",
         oneLiner: "If you’re building AI × GTM in B2B (especially industrial), I’m happy to chat.",
         email: "mailto:at.adityagupta@gmail.com",
-        linkedIn: "https://linkedin.com/in/adityagupta",
+        linkedIn: "https://www.linkedin.com/in/aditya-gupta-/",
         helperLine: "Include: role/team + what you want solved.",
     },
     footer: {
