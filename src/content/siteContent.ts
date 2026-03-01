@@ -36,25 +36,25 @@ export const siteContent = {
     tiles: [
         {
             title: "GTM & Market Intelligence",
-            caption: "Competitive clarity → positioning → decision-ready narratives.",
+            caption: "Clarity → positioning → decision-ready narratives.",
             hrefAnchor: "#gtm",
             imageSrc: "/tiles/gtm.png",
         },
         {
             title: "AI Copilots & Knowledge Systems",
-            caption: "Search + retrieval + workflows people actually adopt.",
+            caption: "Search → retrieval → workflows teams adopt.",
             hrefAnchor: "#copilots",
             imageSrc: "/tiles/copilots.png",
         },
         {
             title: "Content & Storytelling",
-            caption: "Short-form edits + clear messaging + creative iteration.",
+            caption: "Edit → message → iterate.",
             hrefAnchor: "#content",
             imageSrc: "/tiles/content.png",
         },
         {
             title: "Entrepreneurship & Growth Ops",
-            caption: "Distribution loops, CRM systems, and operational discipline.",
+            caption: "Distribution → CRM → repeatable growth.",
             hrefAnchor: "#ops",
             imageSrc: "/tiles/ops.png",
         },
