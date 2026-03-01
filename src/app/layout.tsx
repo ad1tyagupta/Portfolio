@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Inter } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://agupta-portfolio.vercel.app"),
@@ -70,7 +73,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased font-sans bg-white dark:bg-[#0a0a0a] text-gray-900 dark:text-white transition-colors duration-500">
+      <body className={`antialiased ${inter.className} bg-white dark:bg-[#0a0a0a] text-gray-900 dark:text-white transition-colors duration-500`}>
         <ThemeProvider>
           {children}
         </ThemeProvider>

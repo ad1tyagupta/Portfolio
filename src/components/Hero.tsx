@@ -1,9 +1,11 @@
 "use client"
 
 import React, { useState } from "react";
+import dynamic from 'next/dynamic';
 import { siteContent } from "@/content/siteContent";
-import { ShaderAnimation } from "@/components/ui/shader-animation";
 import { useTheme } from "./ThemeProvider";
+
+const ShaderAnimation = dynamic(() => import('@/components/ui/shader-animation').then(mod => mod.ShaderAnimation), { ssr: false });
 
 export default function Hero() {
     const { headline, subline, primaryCta, secondaryCta, microcopy } = siteContent.hero;
