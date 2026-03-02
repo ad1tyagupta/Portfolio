@@ -38,25 +38,25 @@ export const siteContent = {
             title: "GTM & Market Intelligence",
             caption: "Clarity → positioning → decision-ready narratives.",
             hrefAnchor: "#gtm",
-            imageSrc: "/tiles/gtm.webp",
+            imageSrc: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
         },
         {
             title: "AI Copilots & Knowledge Systems",
             caption: "Search → retrieval → workflows teams adopt.",
             hrefAnchor: "#copilots",
-            imageSrc: "/tiles/copilots.webp",
+            imageSrc: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
         },
         {
             title: "Content & Storytelling",
             caption: "Edit → message → iterate.",
             hrefAnchor: "#content",
-            imageSrc: "/tiles/content.webp",
+            imageSrc: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=800",
         },
         {
             title: "Entrepreneurship & Growth Ops",
             caption: "Distribution → CRM → repeatable growth.",
             hrefAnchor: "#ops",
-            imageSrc: "/tiles/ops.webp",
+            imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
         },
     ] as Tile[],
     proofGalleryIntro: "Some artifacts are anonymized due to confidentiality.",
@@ -67,34 +67,44 @@ export const siteContent = {
             intro: "Strategy artifacts that turn research into decisions.",
             items: [
                 {
-                    caption: "Competitive landscape snapshot",
-                    imageSrc: "/proof/gtm/gtm-01.png",
-                    bullets: ["Context: Deep dive into 5 major competitors", "Capability: Landscape mapping & synthesis", "Role: Lead Strategist"],
+                    caption: "Competitive feature heatmap (Siemens Energy)",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+                    bullets: [
+                        "S: At Siemens Energy (industrial software team), leaders wanted to know what competitors offer and what customers will expect next.",
+                        "T: Create a credible comparison that Product + GTM could use—without hype and without guesswork.",
+                        "A: I defined the comparison structure (workflows, analytics, reporting, integrations, admin effort), collected evidence from public sources (manuals, webinars, release notes), and turned it into a simple heatmap + “safe claims” list.",
+                        "R: Stakeholders got a clear view of where competitors are strong and where differentiation is defensible—useful for roadmap discussions and messaging alignment."
+                    ],
                 },
                 {
-                    caption: "Positioning map (simplified)",
-                    imageSrc: "/proof/gtm/gtm-02.png",
-                    bullets: ["Context: Repositioning a legacy B2B product", "Capability: Identifying white space", "Role: Primary market researcher"],
+                    caption: "Market entry prioritization (Bundesdruckerei project)",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+                    bullets: [
+                        "S: In a GTM strategy project with Bundesdruckerei, we faced a broad “where do we start?” problem across many possible markets.",
+                        "T: Turn a large research scope into a short, defensible shortlist for focus and sequencing.",
+                        "A: I built a scoring model (demand signals, feasibility, complexity, partner readiness), ran desk research, and summarized each recommended market with a short “why now” rationale.",
+                        "R: The output became a decision tool—not a long report—so stakeholders could agree on priorities and next steps faster."
+                    ],
                 },
                 {
-                    caption: "Packaging narrative one-pager",
-                    imageSrc: "/proof/gtm/gtm-03.png",
-                    bullets: ["Context: Streamlining complex pricing schemas", "Capability: Value-based packaging", "Role: Product Marketing Lead"],
+                    caption: "Pain → message framework (Siemens Energy)",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+                    bullets: [
+                        "S: At Siemens Energy, internal messaging often drifted into feature lists, while buyers care about outcomes (risk, uptime, ROI).",
+                        "T: Create messaging that sales and product can use consistently—simple, buyer-first, and backed by proof.",
+                        "A: I created a framework: Pain → Value → Proof, wrote short message lines per audience, and mapped each message to the proof asset needed (demo, screenshot, documentation).",
+                        "R: The team had a clearer talk track and fewer “feature-dump” discussions—messages became easier to reuse across slides, emails, and stakeholder updates."
+                    ],
                 },
                 {
-                    caption: "Pain → message framework",
-                    imageSrc: "/proof/gtm/gtm-04.png",
-                    bullets: ["Context: Equipping sales with targeted messaging", "Capability: Persona-driven copywriting", "Role: Co-Author"],
-                },
-                {
-                    caption: "GTM plan skeleton",
-                    imageSrc: "/proof/gtm/gtm-05.png",
-                    bullets: ["Context: High-level roadmap for new feature tier", "Capability: Cross-functional alignment", "Role: GTM Lead"],
-                },
-                {
-                    caption: "Executive summary slide",
-                    imageSrc: "/proof/gtm/gtm-06.png",
-                    bullets: ["Context: Pitching a pivot to the board", "Capability: Concise storytelling", "Role: Lead Analyst"],
+                    caption: "Executive decision memo (Siemens Energy)",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+                    bullets: [
+                        "S: In Siemens Energy projects, senior stakeholders needed quick clarity: “What’s the decision and why?”—not 20-slide decks.",
+                        "T: Condense complex work into one page that supports a decision under time pressure.",
+                        "A: I used a 1-page structure: Decision → Evidence → Risks → Next steps, highlighted trade-offs, and clearly stated what we should not claim if it wasn’t provable.",
+                        "R: Faster alignment, clearer ownership, and more productive discussions—without extra meetings."
+                    ],
                 },
             ],
         },
@@ -105,32 +115,32 @@ export const siteContent = {
             items: [
                 {
                     caption: "RAG pipeline overview",
-                    imageSrc: "/proof/copilots/copilots-01.png",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
                     bullets: ["Context: Internal knowledge retrieval system", "Capability: Architecture design", "Role: AI Product Manager"],
                 },
                 {
                     caption: "Chat UI: example Q&A",
-                    imageSrc: "/proof/copilots/copilots-02.png",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
                     bullets: ["Context: Agentic interface for field engineers", "Capability: Prompt engineering & UX", "Role: Builder"],
                 },
                 {
                     caption: "Knowledge base structure",
-                    imageSrc: "/proof/copilots/copilots-03.png",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
                     bullets: ["Context: Organizing unstructured docs for ingest", "Capability: Data taxonomy & governance", "Role: Project Lead"],
                 },
                 {
                     caption: "Evaluation notes",
-                    imageSrc: "/proof/copilots/copilots-04.png",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
                     bullets: ["Context: Testing LLM hallucination rates", "Capability: Empirical testing frameworks", "Role: Evaluator"],
                 },
                 {
                     caption: "Agent flow: steps + tools",
-                    imageSrc: "/proof/copilots/copilots-05.png",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
                     bullets: ["Context: Multi-step reasoning pipeline", "Capability: Agentic workflow design", "Role: Developer"],
                 },
                 {
                     caption: "Automation workflow snapshot",
-                    imageSrc: "/proof/copilots/copilots-06.png",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
                     bullets: ["Context: Connecting CRM to generation endpoints", "Capability: No-code / low-code integration", "Role: Architect"],
                 },
             ],
@@ -142,32 +152,32 @@ export const siteContent = {
             items: [
                 {
                     caption: "Editing timeline: 30-sec cut",
-                    imageSrc: "/proof/content/content-01.png",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
                     bullets: ["Context: Core product explainer video", "Capability: Video editing & pacing", "Role: Editor"],
                 },
                 {
                     caption: "Before/after: pacing",
-                    imageSrc: "/proof/content/content-02.png",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
                     bullets: ["Context: Tightening an overly long technical video", "Capability: Narrative refinement", "Role: Editor & Reviewer"],
                 },
                 {
                     caption: "AI ad concepts grid",
-                    imageSrc: "/proof/content/content-03.png",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
                     bullets: ["Context: Rapid testing of creative angles", "Capability: AI image generation & copy", "Role: Creative Lead"],
                 },
                 {
                     caption: "Hook bank: openers",
-                    imageSrc: "/proof/content/content-04.png",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
                     bullets: ["Context: Repository of high-converting intros", "Capability: Copywriting & a/b testing", "Role: Copywriter"],
                 },
                 {
                     caption: "Storyboard: 6 frames",
-                    imageSrc: "/proof/content/content-05.png",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
                     bullets: ["Context: Pitching a visual concept to stakeholders", "Capability: Visual storytelling", "Role: Art Director"],
                 },
                 {
                     caption: "Slide: messy → crisp",
-                    imageSrc: "/proof/content/content-06.png",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
                     bullets: ["Context: Board-level presentation overhaul", "Capability: Information design", "Role: Presentation Designer"],
                 },
             ],
@@ -179,32 +189,32 @@ export const siteContent = {
             items: [
                 {
                     caption: "HubSpot pipeline structure",
-                    imageSrc: "/proof/ops/ops-01.png",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
                     bullets: ["Context: Rebuilding B2B sales stages", "Capability: CRM architecture", "Role: RevOps Lead"],
                 },
                 {
                     caption: "Lifecycle stages",
-                    imageSrc: "/proof/ops/ops-02.png",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
                     bullets: ["Context: Lead scoring and progression alignment", "Capability: Marketing/Sales handoff design", "Role: Operations Manager"],
                 },
                 {
                     caption: "Lead source snapshot",
-                    imageSrc: "/proof/ops/ops-03.png",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
                     bullets: ["Context: Tracking ROI across 5 major channels", "Capability: Dashboarding & analytics", "Role: Growth Analyst"],
                 },
                 {
                     caption: "Sales process checklist",
-                    imageSrc: "/proof/ops/ops-04.png",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
                     bullets: ["Context: Standardizing rep behavior", "Capability: Change management & enablement", "Role: Sales Enablement"],
                 },
                 {
                     caption: "Simple forecasting sheet",
-                    imageSrc: "/proof/ops/ops-05.png",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
                     bullets: ["Context: Predicting revenue based on pipeline velocity", "Capability: Financial modeling", "Role: Operator"],
                 },
                 {
                     caption: "Segmentation snapshot",
-                    imageSrc: "/proof/ops/ops-06.png",
+                    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
                     bullets: ["Context: Dividing user base for targeted email drops", "Capability: Data querying & segmentation", "Role: Lifecycle Marketer"],
                 },
             ],

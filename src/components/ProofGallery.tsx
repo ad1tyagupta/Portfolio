@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { siteContent } from "@/content/siteContent";
 import LightboxModal from "./LightboxModal";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 export default function ProofGallery() {
     const [modalState, setModalState] = useState<{
@@ -69,9 +70,17 @@ export default function ProofGallery() {
                                     <button
                                         key={idx}
                                         onClick={() => handleOpen(section.id, idx)}
-                                        className="group flex flex-col items-start w-full text-left"
+                                        className="group flex flex-col items-start w-full text-left relative p-1.5 md:p-2 rounded-xl border border-transparent hover:border-gray-200 dark:hover:border-white/10 transition-all hover:shadow-xl dark:hover:shadow-[0_8px_30px_rgb(0,0,0,0.5)] z-0"
                                     >
-                                        <div className="relative w-full aspect-video bg-gray-100 dark:bg-[#111111] rounded-xl overflow-hidden mb-4 border border-gray-200 dark:border-white/10 transition-colors duration-500">
+                                        <GlowingEffect
+                                            spread={40}
+                                            glow={true}
+                                            disabled={false}
+                                            proximity={64}
+                                            inactiveZone={0.01}
+                                            borderWidth={2}
+                                        />
+                                        <div className="relative w-full aspect-video bg-gray-100 dark:bg-[#111111] rounded-xl overflow-hidden mb-4 border border-gray-200 dark:border-white/10 transition-all z-10 bg-background">
                                             <Image
                                                 src={item.imageSrc}
                                                 alt={item.caption}
@@ -86,7 +95,7 @@ export default function ProofGallery() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <span className="font-semibold text-gray-900 dark:text-gray-200 group-hover:text-[#0f66bd] dark:group-hover:text-[#137fec] transition-colors">
+                                        <span className="font-semibold text-gray-900 dark:text-gray-200 group-hover:text-[#0f66bd] dark:group-hover:text-[#137fec] transition-colors relative z-10">
                                             {item.caption}
                                         </span>
                                     </button>
